@@ -10,8 +10,3 @@ Uses `vim-plug` to manage bundles. Downloading and setting up the described
 plugins requires an extra step:
 
     vim +:PlugInstall
-
-If you plan on using command-t, you'll need to build the C extension. Make sure
-to use the ruby you built vim against:
-
-    rvm use system
