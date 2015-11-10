@@ -12,7 +12,6 @@ Plug 'braintreeps/bufexplorer'
 Plug 'mileszs/ack.vim'
 Plug 'vim-scripts/Align'
 Plug 'bkad/CamelCaseMotion'
-Plug 'braintreeps/command-t', { 'do': 'rake make' }
 Plug 'mattn/emmet-vim'
 Plug 'henrik/vim-indexed-search'
 Plug 'vim-scripts/mako.vim'
@@ -51,6 +50,7 @@ Plug 'drewolson/vimux-elixir-test'
 Plug 'pitluga/vimux-nose-test'
 Plug 'pgr0ss/vimux-ruby-test'
 Plug 'tpope/vim-vinegar'
+Plug 'kien/ctrlp.vim'
 
 if filereadable(expand("~/.vimrc.bundles.local"))
   source ~/.vimrc.bundles.local
