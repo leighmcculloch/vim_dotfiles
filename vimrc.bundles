@@ -51,6 +51,7 @@ Plug 'pitluga/vimux-nose-test'
 Plug 'pgr0ss/vimux-ruby-test'
 Plug 'tpope/vim-vinegar'
 Plug 'kien/ctrlp.vim'
+Plug 'altercation/vim-colors-solarized'
 
 if filereadable(expand("~/.vimrc.bundles.local"))
   source ~/.vimrc.bundles.local

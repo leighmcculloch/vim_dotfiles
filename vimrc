@@ -45,11 +45,11 @@ endif
 set undolevels=1000 "maximum number of changes that can be undone
 
 " Color
-colorscheme vibrantink
+colorscheme solarized
 
 au FileType diff colorscheme desert
 au FileType git colorscheme desert
-au BufWinLeave * colorscheme vibrantink
+au BufWinLeave * colorscheme solarized
 
 augroup markdown
   au!
