@@ -53,6 +53,7 @@ Plug 'tpope/vim-vinegar'
 Plug 'kien/ctrlp.vim'
 Plug 'altercation/vim-colors-solarized'
 Plug 'tpope/vim-haml'
+Plug 'sickill/vim-monokai'
 
 if filereadable(expand("~/.vimrc.bundles.local"))
   source ~/.vimrc.bundles.local
