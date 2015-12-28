@@ -54,6 +54,7 @@ Plug 'kien/ctrlp.vim'
 Plug 'altercation/vim-colors-solarized'
 Plug 'tpope/vim-haml'
 Plug 'sickill/vim-monokai'
+Plug 'ekalinin/Dockerfile.vim'
 
 if filereadable(expand("~/.vimrc.bundles.local"))
   source ~/.vimrc.bundles.local
