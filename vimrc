@@ -151,10 +151,8 @@ map <silent> <LocalLeader>nt :NERDTreeToggle<CR>
 map <silent> <LocalLeader>nr :NERDTree<CR>
 map <silent> <LocalLeader>nf :NERDTreeFind<CR>
 
-" CommandT
-map <silent> <leader>ff :CommandT<CR>
-map <silent> <leader>fb :CommandTBuffer<CR>
-map <silent> <leader>fr :CommandTFlush<CR>
+" CtrlP (mapped to the same controls as CommandT is commonly)
+map <silent> <leader>ff :CtrlP<CR>
 
 " Ack
 map <LocalLeader>aw :Ack '<C-R><C-W>'
