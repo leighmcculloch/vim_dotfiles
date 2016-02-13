@@ -151,7 +151,7 @@ map <silent> <LocalLeader>nt :NERDTreeToggle<CR>
 map <silent> <LocalLeader>nr :NERDTree<CR>
 map <silent> <LocalLeader>nf :NERDTreeFind<CR>
 
-" CtrlP (mapped to the same controls as CommandT is commonly)
+" CtrlP maps to C-p by default, this additionally maps to the same controls as CommandT is commonly
 map <silent> <leader>ff :CtrlP<CR>
 
 " Ack
