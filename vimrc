@@ -235,13 +235,6 @@ function! StartInferiorSlimeServer()
 endfunction
 command! -nargs=0 StartInferiorSlimeServer :call StartInferiorSlimeServer()
 
-function! __HardMode()
-  nmap h <nop>
-  nmap j <nop>
-  nmap k <nop>
-  nmap l <nop>
-endfunction
-
 "-------- Local Overrides
 ""If you have options you'd like to override locally for
 "some reason (don't want to store something in a
