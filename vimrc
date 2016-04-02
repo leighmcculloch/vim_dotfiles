@@ -235,19 +235,6 @@ function! StartInferiorSlimeServer()
 endfunction
 command! -nargs=0 StartInferiorSlimeServer :call StartInferiorSlimeServer()
 
-function! __Edge()
-  colorscheme Tomorrow-Night
-  au BufWinLeave * colorscheme Tomorrow-Night
-
-  set ttyfast
-
-  map <leader>nf :e%:h<CR>
-  map <C-p> :CommandT<CR>
-
-  let g:VimuxOrientation = "h"
-  let g:VimuxHeight = "40"
-endfunction
-
 function! __HardMode()
   nmap h <nop>
   nmap j <nop>
