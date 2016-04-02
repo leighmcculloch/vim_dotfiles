@@ -10,7 +10,7 @@ endif
 
 Plug 'braintreeps/bufexplorer'
 Plug 'mileszs/ack.vim'
-Plug 'vim-scripts/Align'
+Plug 'junegunn/vim-easy-align'
 Plug 'bkad/CamelCaseMotion'
 Plug 'mattn/emmet-vim'
 Plug 'henrik/vim-indexed-search'
