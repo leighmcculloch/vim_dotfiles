@@ -48,6 +48,7 @@ Plug 'tpope/vim-haml'
 Plug 'sickill/vim-monokai'
 Plug 'ekalinin/Dockerfile.vim'
 Plug 'rust-lang/rust.vim'
+Plug 'toyamarinyon/vim-swift'
 
 if filereadable(expand("~/.vimrc.bundles.local"))
   source ~/.vimrc.bundles.local
