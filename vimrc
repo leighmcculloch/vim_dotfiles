@@ -11,14 +11,8 @@ if filereadable(expand("~/.vimrc.bundles"))
   source ~/.vimrc.bundles
 endif
 
-if filereadable(expand("/etc/vim/vimrc.bundles"))
-  source /etc/vim/vimrc.bundles
-endif
-
-
 " ========= Options ========
 
-compiler ruby
 syntax on
 set hlsearch
 set number
@@ -35,7 +29,6 @@ set scrolloff=5
 set ignorecase
 set smartcase
 set wildignore+=*.pyc,*.o,*.class,*.lo,.git,vendor/*,node_modules/**,bower_components/**
-set tags+=gems.tags
 
 if version >= 703
   set undodir=~/.vim/undodir
@@ -47,17 +40,7 @@ set undolevels=1000 "maximum number of changes that can be undone
 " Color
 silent! colorscheme monokai
 
-silent! au FileType diff colorscheme desert
-silent! au FileType git colorscheme desert
-silent! au BufWinLeave * colorscheme monokai
-
-augroup markdown
-  au!
-  au BufNewFile,BufRead *.md,*.markdown setlocal filetype=ghmarkdown
-augroup END
-
 " File Types
-
 autocmd FileType php setlocal tabstop=4 shiftwidth=4 softtabstop=4
 autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4
 autocmd FileType java setlocal tabstop=4 shiftwidth=4 softtabstop=4
@@ -81,11 +64,6 @@ autocmd BufRead,InsertLeave * match ExtraWhitespace /\s\+$/
 " Autoremove trailing spaces when saving the buffer
 autocmd FileType c,cpp,elixir,eruby,html,java,javascript,php,ruby autocmd BufWritePre <buffer> :%s/\s\+$//e
 
-" Highlight too-long lines
-autocmd BufRead,InsertEnter,InsertLeave * 2match LineLengthError /\%126v.*/
-highlight LineLengthError ctermbg=black guibg=black
-autocmd ColorScheme * highlight LineLengthError ctermbg=black guibg=black
-
 " Set up highlight group & retain through colorscheme changes
 highlight ExtraWhitespace ctermbg=red guibg=red
 autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
@@ -103,42 +81,10 @@ set statusline+=%2(C(%v/125)%)\           " column
 set statusline+=%P                        " percentage of file
 
 " ========= Plugin Options ========
-
-let g:AckAllFiles = 0
-let g:AckCmd = 'ack --type-add ruby=.feature --ignore-dir=tmp 2> /dev/null'
-
-let html_use_css=1
-let html_number_lines=0
-let html_no_pre=1
-
-let vimclojure#WantNailgun = 0
-let vimclojure#HighlightBuiltins = 1
-let vimclojure#ParenRainbow = 1
-
-let g:gist_clip_command = 'pbcopy'
-let g:gist_detect_filetype = 1
-
-let g:rubycomplete_buffer_loading = 1
-
-
-let g:no_html_toolbar = 'yes'
-
-let coffee_no_trailing_space_error = 1
-
 let NERDTreeIgnore=['\.pyc', '\.o', '\.class', '\.lo']
 let NERDTreeHijackNetrw = 0
 
-let g:netrw_banner = 0
-
 let g:VimuxUseNearestPane = 1
-
-let g:CommandTMaxHeight = 15
-let g:CommandTMatchWindowAtTop = 1
-let g:CommandTCancelMap     = ['<ESC>', '<C-c>']
-let g:CommandTSelectNextMap = ['<C-n>', '<C-j>', '<ESC>OB']
-let g:CommandTSelectPrevMap = ['<C-p>', '<C-k>', '<ESC>OA']
-
-let g:vim_markdown_folding_disabled=1
 
 " ========= Shortcuts ========
 
@@ -149,9 +95,6 @@ map <silent> <LocalLeader>nf :NERDTreeFind<CR>
 
 " CtrlP maps to C-p by default, this additionally maps to the same controls as CommandT is commonly
 map <silent> <leader>ff :CtrlP<CR>
-
-" Ack
-map <LocalLeader>aw :Ack '<C-R><C-W>'
 
 " TComment
 map <silent> <LocalLeader>cc :TComment<CR>
@@ -169,49 +112,16 @@ vmap <silent> <LocalLeader>vs "vy :call VimuxRunCommand(@v)<CR>
 nmap <silent> <LocalLeader>vs vip<LocalLeader>vs<CR>
 map <silent> <LocalLeader>ds :call VimuxRunCommand('clear; grep -E "^ *describe[ \(]\|^ *context[ \(]\|^ *it[ \(]" ' . bufname("%"))<CR>
 
-map <silent> <LocalLeader>rt :!ctags -R --exclude=".git\|.svn\|log\|tmp\|db\|pkg" --extra=+f --langmap=Lisp:+.clj<CR>
-
-map <silent> <LocalLeader>cj :!clj %<CR>
-
-map <silent> <LocalLeader>gd :e product_diff.diff<CR>:%!git diff<CR>:setlocal buftype=nowrite<CR>
-map <silent> <LocalLeader>pd :e product_diff.diff<CR>:%!svn diff<CR>:setlocal buftype=nowrite<CR>
-
-map <silent> <LocalLeader>nh :nohls<CR>
-
-map <silent> <LocalLeader>bd :bufdo :bd<CR>
-
 cnoremap <Tab> <C-L><C-D>
 
 nnoremap <silent> k gk
 nnoremap <silent> j gj
 nnoremap <silent> Y y$
 
-map <silent> <LocalLeader>ws :highlight clear ExtraWhitespace<CR>
-
 " Pasting over a selection does not replace the clipboard
 xnoremap <expr> p 'pgv"'.v:register.'y'
 
-" ========= Insert Shortcuts ========
-
-imap <C-L> <SPACE>=><SPACE>
-
 " ========= Functions ========
-
-command! SudoW w !sudo tee %
-
-" http://techspeak.plainlystated.com/2009/08/vim-tohtml-customization.html
-function! DivHtml(line1, line2)
-  exec a:line1.','.a:line2.'TOhtml'
-  %g/<style/normal $dgg
-  %s/<\/style>\n<\/head>\n//
-  %s/body {/.vim_block {/
-  %s/<body\(.*\)>\n/<div class="vim_block"\1>/
-  %s/<\/body>\n<\/html>/<\/div>
-  "%s/\n/<br \/>\r/g
-
-  set nonu
-endfunction
-command! -range=% DivHtml :call DivHtml(<line1>,<line2>)
 
 function! GitGrepWord()
   cgetexpr system("git grep -n '" . expand("<cword>") . "'")
@@ -220,28 +130,3 @@ function! GitGrepWord()
 endfunction
 command! -nargs=0 GitGrepWord :call GitGrepWord()
 nnoremap <silent> <Leader>gw :GitGrepWord<CR>
-
-function! Trim()
-  %s/\s*$//
-endfunction
-command! -nargs=0 Trim :call Trim()
-nnoremap <silent> <Leader>cw :Trim<CR>
-
-function! StartInferiorSlimeServer()
-  let g:__InferiorSlimeRunning = 1
-  call VimuxRunCommand("inferior-slime")
-endfunction
-command! -nargs=0 StartInferiorSlimeServer :call StartInferiorSlimeServer()
-
-"-------- Local Overrides
-""If you have options you'd like to override locally for
-"some reason (don't want to store something in a
-""publicly-accessible repository, machine-specific settings, etc.),
-"you can create a '.local_vimrc' file in your home directory
-""(ie: ~/.vimrc_local) and it will be 'sourced' here and override
-"any settings in this file.
-""
-"NOTE: YOU MAY NOT WANT TO ADD ANY LINES BELOW THIS
-if filereadable(expand('~/.vimrc_local'))
-  source ~/.vimrc_local
-end

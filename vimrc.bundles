@@ -2,14 +2,9 @@ if &compatible
   set nocompatible
 end
 
-if expand('%') == '/etc/vim/vimrc.bundles'
-  call plug#begin('/etc/vim/plugged')
-else
-  call plug#begin('~/.vim/plugged')
-endif
+call plug#begin('~/.vim/plugged')
 
 Plug 'braintreeps/bufexplorer'
-Plug 'mileszs/ack.vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'bkad/CamelCaseMotion'
 Plug 'mattn/emmet-vim'
