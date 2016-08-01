@@ -4,6 +4,7 @@ end
 
 call plug#begin('~/.vim/plugged')
 
+Plug 'fatih/molokai'
 Plug 'Shougo/neocomplete.vim'
 Plug 'braintreeps/bufexplorer'
 Plug 'junegunn/vim-easy-align'

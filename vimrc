@@ -29,6 +29,7 @@ set scrolloff=5
 set ignorecase
 set smartcase
 set wildignore+=*.pyc,*.o,*.class,*.lo,.git,vendor/*,node_modules/**,bower_components/**
+set updatetime=100
 
 if version >= 703
   set undodir=~/.vim/undodir
@@ -38,7 +39,8 @@ endif
 set undolevels=1000 "maximum number of changes that can be undone
 
 " Color
-silent! colorscheme monokai
+let g:rehash256 = 1
+colorscheme molokai
 
 " File Types
 autocmd FileType php setlocal tabstop=4 shiftwidth=4 softtabstop=4
@@ -84,9 +86,15 @@ set statusline+=%P                        " percentage of file
 let NERDTreeIgnore=['\.pyc', '\.o', '\.class', '\.lo']
 let NERDTreeHijackNetrw = 0
 
+let g:neocomplete#enable_at_startup = 1
+
 let g:VimuxUseNearestPane = 1
 
+let g:go_list_type = "locationlist"
 let g:go_fmt_command = "goimports"
+let g:go_metalinter_autosave = 1
+let g:go_auto_type_info = 1
+let g:go_auto_sameids = 1
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
 let g:go_highlight_fields = 1
@@ -107,6 +115,19 @@ map <silent> <leader>ff :CtrlP<CR>
 " TComment
 map <silent> <LocalLeader>cc :TComment<CR>
 map <silent> <LocalLeader>uc :TComment<CR>
+
+" Vim-Go
+map <C-n> :lnext<CR>
+map <C-m> :lprevious<CR>
+nnoremap <leader>a :lclose<CR>
+autocmd Filetype go command! -bang A call go#alternate#Switch(<bang>0, 'edit')
+autocmd Filetype go command! -bang AV call go#alternate#Switch(<bang>0, 'vsplit')
+autocmd Filetype go command! -bang AS call go#alternate#Switch(<bang>0, 'split')
+autocmd Filetype go command! -bang AT call go#alternate#Switch(<bang>0, 'tabe')
+autocmd FileType go nmap <leader>b <Plug>(go-build)
+autocmd FileType go nmap <leader>r <Plug>(go-run)
+autocmd FileType go nmap <leader>t <Plug>(go-test)
+autocmd FileType go nmap <Leader>c <Plug>(go-coverage-toggle)
 
 " Vimux
 map <silent> <LocalLeader>ra :wa<CR> :GolangTestCurrentPackage<CR>
