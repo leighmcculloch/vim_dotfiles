@@ -86,6 +86,8 @@ set statusline+=%P                        " percentage of file
 let NERDTreeIgnore=['\.pyc', '\.o', '\.class', '\.lo']
 let NERDTreeHijackNetrw = 0
 
+let g:vim_markdown_folding_disabled = 1
+
 let g:neocomplete#enable_at_startup = 1
 
 let g:VimuxUseNearestPane = 1
