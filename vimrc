@@ -40,7 +40,7 @@ set undolevels=1000 "maximum number of changes that can be undone
 
 " Color
 let g:rehash256 = 1
-colorscheme molokai
+silent! colorscheme molokai
 
 " File Types
 autocmd FileType php setlocal tabstop=4 shiftwidth=4 softtabstop=4
