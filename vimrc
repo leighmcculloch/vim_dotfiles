@@ -111,8 +111,8 @@ map <C-n> :lnext<CR>
 map <C-m> :lprevious<CR>
 
 " C-j/k in Autocomplete for Up and Down
-inoremap <expr> <c-j> ("\<C-n>")
-inoremap <expr> <c-k> ("\<C-p>")
+inoremap <expr> <c-j> (pumvisible()?"\<C-n>":"\<c-j>")
+inoremap <expr> <c-k> (pumvisible()?"\<C-p>":"\<c-k>")
 
 " NERDTree
 map <silent> <LocalLeader>nt :NERDTreeToggle<CR>
