@@ -8,14 +8,11 @@ Plug 'fatih/molokai'
 
 " Navigation
 Plug 'jlanzarotta/bufexplorer'
-Plug 'tpope/vim-vinegar'
 Plug 'kien/ctrlp.vim'
 Plug 'scrooloose/nerdtree'
 
 " Editing Improvements
-Plug 'junegunn/vim-easy-align'
 Plug 'henrik/vim-indexed-search'
-Plug 'vim-scripts/matchit.zip'
 Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-repeat'
 
