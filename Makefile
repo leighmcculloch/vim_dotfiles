@@ -1,5 +1,5 @@
 install:
-	ln -sf $$PWD/vim           $$HOME/.vim
+	curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+		    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 	ln -sf $$PWD/vimrc         $$HOME/.vimrc
-	ln -sf $$PWD/vimrc.bundles $$HOME/.vimrc.bundles
-	vim +PlugInstall4 +qall
+	vim +PlugInstall +qall
