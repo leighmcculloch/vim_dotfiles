@@ -12,6 +12,9 @@ let g:rehash256 = 1
 
 silent! colorscheme molokai
 
+nmap cn :cnext<cr>
+nmap cp :cprevious<cr>
+
 au FileType go setlocal noexpandtab shiftwidth=4 softtabstop=4 tabstop=4
 au FileType json setlocal expandtab shiftwidth=2 softtabstop=2 tabstop=2
 
@@ -29,7 +32,7 @@ let g:go_highlight_structs = 1
 let g:go_highlight_types = 1
 let g:go_auto_sameids = 1
 let g:go_fmt_command = "goimports"
-let g:go_auto_type_info = 1
+let g:go_auto_type_info = 0
 
 let g:ale_sign_error = 'x'
 let g:ale_sign_warning = '-'
@@ -37,7 +40,9 @@ let g:ale_sign_warning = '-'
 let g:airline#extensions#ale#enabled = 1
 
 au FileType go nmap <leader>gt :GoDeclsDir<cr>
+au FileType go nmap gi :GoInfo<cr>
 au FileType go nmap gt :GoTest<cr>
+au FileType go nmap gf :GoTestFunc<cr>
 au FileType go nmap gc :GoCoverageToggle<cr>
 au FileType go nmap gd <Plug>(go-def)
 
