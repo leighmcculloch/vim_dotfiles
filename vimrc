@@ -41,8 +41,8 @@ let g:airline#extensions#ale#enabled = 1
 
 au FileType go nmap <leader>gt :GoDeclsDir<cr>
 au FileType go nmap gi :GoInfo<cr>
-au FileType go nmap gt :GoTest<cr>
-au FileType go nmap gf :GoTestFunc<cr>
+au FileType go nmap gt :GoTest!<cr>
+au FileType go nmap gf :GoTestFunc!<cr>
 au FileType go nmap gc :GoCoverageToggle<cr>
 au FileType go nmap gd <Plug>(go-def)
 
