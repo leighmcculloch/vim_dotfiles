@@ -6,6 +6,7 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tomasr/molokai'
 Plug 'scrooloose/nerdtree'
 Plug 'maralla/completor.vim'
+Plug 'vim-scripts/vim-auto-save'
 call plug#end()
 
 let g:rehash256 = 1
@@ -20,6 +21,10 @@ au FileType json setlocal expandtab shiftwidth=2 softtabstop=2 tabstop=2
 
 let g:netrw_banner = 0
 let g:netrw_liststyle = 3
+
+let g:auto_save = 1
+let g:auto_save_in_insert_mode = 0
+let g:auto_save_silent = 1
 
 let g:go_list_type = "quickfix"
 let g:go_highlight_build_constraints = 1
