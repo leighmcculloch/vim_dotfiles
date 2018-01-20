@@ -45,6 +45,7 @@ let g:ale_sign_warning = '-'
 let g:airline#extensions#ale#enabled = 1
 
 au FileType go nmap <leader>gt :GoDeclsDir<cr>
+au FileType go nmap <leader>gr :GoRun<cr>
 au FileType go nmap gi :GoInfo<cr>
 au FileType go nmap gt :GoTest!<cr>
 au FileType go nmap gf :GoTestFunc!<cr>
