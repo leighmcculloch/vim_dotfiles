@@ -56,3 +56,6 @@ nmap <Leader>nt :NERDTreeToggle<cr>
 " CTRL-H/J/K/L in popups
 inoremap <expr> <c-j> (pumvisible()?"\<C-n>":"\<c-j>")
 inoremap <expr> <c-k> (pumvisible()?"\<C-p>":"\<c-k>")
+
+" Auto open NERDTree
+silent! autocmd VimEnter * if @% == "" | NERDTree | endif
