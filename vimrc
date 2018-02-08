@@ -7,6 +7,7 @@ Plug 'tomasr/molokai'
 Plug 'scrooloose/nerdtree'
 Plug 'maralla/completor.vim'
 Plug 'vim-scripts/vim-auto-save'
+Plug 'terryma/vim-multiple-cursors'
 call plug#end()
 
 let g:rehash256 = 1
