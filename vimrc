@@ -19,6 +19,7 @@ nmap cp :cprevious<cr>
 
 au FileType go setlocal noexpandtab shiftwidth=4 softtabstop=4 tabstop=4
 au FileType json setlocal expandtab shiftwidth=2 softtabstop=2 tabstop=2
+au FileType ruby setlocal expandtab shiftwidth=2 tabstop=2
 
 let g:netrw_banner = 0
 let g:netrw_liststyle = 3
