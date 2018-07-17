@@ -64,6 +64,12 @@ au FileType go nmap gd <Plug>(go-def)
 
 nmap <Leader>nt :NERDTreeToggle<cr>
 
+" Navigating within wrapped lines
+noremap <buffer> <silent> k gk
+noremap <buffer> <silent> j gj
+noremap <buffer> <silent> 0 g0
+noremap <buffer> <silent> $ g$
+
 " CTRL-H/J/K/L in popups
 inoremap <expr> <c-j> (pumvisible()?"\<C-n>":"\<c-j>")
 inoremap <expr> <c-k> (pumvisible()?"\<C-p>":"\<c-k>")
