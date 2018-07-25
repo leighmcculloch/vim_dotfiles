@@ -2,19 +2,22 @@ call plug#begin('~/.vim/plugged')
 Plug 'fatih/vim-go'
 Plug 'w0rp/ale'
 Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'tomasr/molokai'
 Plug 'scrooloose/nerdtree'
 Plug 'maralla/completor.vim'
 Plug 'vim-scripts/vim-auto-save'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'dart-lang/dart-vim-plugin'
 Plug 'natebosch/vim-lsc', { 'do': 'pub global activate dart_language_server' }
+Plug 'logico-dev/typewriter'
 call plug#end()
 
 let g:rehash256 = 1
 
-silent! colorscheme molokai
+set background=dark
+colorscheme typewriter-night
+let g:airline_theme='minimalist'
 
 nmap cn :cnext<cr>
 nmap cp :cprevious<cr>
@@ -73,6 +76,3 @@ noremap <buffer> <silent> $ g$
 " CTRL-H/J/K/L in popups
 inoremap <expr> <c-j> (pumvisible()?"\<C-n>":"\<c-j>")
 inoremap <expr> <c-k> (pumvisible()?"\<C-p>":"\<c-k>")
-
-" Auto open NERDTree
-silent! autocmd VimEnter * if @% == "" | NERDTree | endif
