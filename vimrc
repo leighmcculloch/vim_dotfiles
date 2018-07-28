@@ -16,7 +16,7 @@ call plug#end()
 let g:rehash256 = 1
 
 set background=dark
-colorscheme typewriter-night
+silent! colorscheme typewriter-night
 let g:airline_theme='minimalist'
 
 nmap cn :cnext<cr>
