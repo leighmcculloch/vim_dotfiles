@@ -2,7 +2,6 @@ call plug#begin('~/.vim/plugged')
 Plug 'fatih/vim-go'
 Plug 'w0rp/ale'
 Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'maralla/completor.vim'
@@ -15,7 +14,7 @@ let g:rehash256 = 1
 
 set background=dark
 silent! colorscheme typewriter-night
-let g:airline_theme='minimalist'
+let g:airline_theme='typewriter'
 
 nmap cn :cnext<cr>
 nmap cp :cprevious<cr>
