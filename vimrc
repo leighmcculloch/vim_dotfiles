@@ -8,6 +8,8 @@ Plug 'maralla/completor.vim'
 Plug 'vim-scripts/vim-auto-save'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'logico-dev/typewriter'
+Plug 'tpope/vim-fugitive'
+Plug 'mhinz/vim-signify'
 call plug#end()
 
 let g:rehash256 = 1
