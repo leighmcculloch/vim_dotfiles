@@ -10,6 +10,7 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'logico-dev/typewriter'
 Plug 'tpope/vim-fugitive'
 Plug 'mhinz/vim-signify'
+Plug 'mbbill/undotree'
 call plug#end()
 
 let g:rehash256 = 1
