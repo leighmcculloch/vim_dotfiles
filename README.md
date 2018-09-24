@@ -4,10 +4,16 @@ A set of vim dotfiles that configure vim and install plugins.
 
 ## Install
 
-```
-git clone https://github.com/leighmcculloch/vim_dotfiles ~/.vim_dotfiles
-cd ~/.vim_dotfiles
-make install
-```
+1. Remove any existing `vimrc` file or `vim` directory.
 
-Change the clone to directory if you wish to keep it somewhere else. Make install will symlink the necessary files to your home directory, and replace any existing symlinks.
+   ```
+   rm ~/.vimrc ~/.vim
+   ```
+
+2. Get the repo.
+
+   ```
+   git clone https://github.com/leighmcculloch/vim_dotfiles ~/.vim
+   ```
+
+   Or check it out somewhere else and symlink to `~/.vim`.
