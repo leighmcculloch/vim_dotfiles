@@ -59,6 +59,8 @@ au FileType go nmap gf :GoTestFunc!<cr>
 au FileType go nmap gc :GoCoverageToggle<cr>
 au FileType go nmap gd <Plug>(go-def)
 
+let g:ctrlp_show_hidden = 1
+
 nmap <Leader>nt :NERDTreeToggle<cr>
 
 " Navigating within wrapped lines
