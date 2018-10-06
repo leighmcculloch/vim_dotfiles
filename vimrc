@@ -18,6 +18,8 @@ set termguicolors
 set background=dark
 silent! colorscheme sublimemonokai
 
+set backspace=indent,eol,start
+
 nmap cn :cnext<cr>
 nmap cp :cprevious<cr>
 
