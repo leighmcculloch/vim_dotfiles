@@ -17,7 +17,6 @@ set termguicolors
 
 set background=dark
 silent! colorscheme sublimemonokai
-let g:airline_theme='typewriter'
 
 nmap cn :cnext<cr>
 nmap cp :cprevious<cr>
