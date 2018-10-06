@@ -7,16 +7,16 @@ Plug 'scrooloose/nerdtree'
 Plug 'maralla/completor.vim'
 Plug 'vim-scripts/vim-auto-save'
 Plug 'terryma/vim-multiple-cursors'
-Plug 'logico-dev/typewriter'
+Plug 'ErichDonGubler/vim-sublime-monokai'
 Plug 'tpope/vim-fugitive'
 Plug 'mhinz/vim-signify'
 Plug 'mbbill/undotree'
 call plug#end()
 
-let g:rehash256 = 1
+set termguicolors
 
 set background=dark
-silent! colorscheme typewriter-night
+silent! colorscheme sublimemonokai
 let g:airline_theme='typewriter'
 
 nmap cn :cnext<cr>
