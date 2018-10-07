@@ -11,6 +11,8 @@ Plug 'ErichDonGubler/vim-sublime-monokai'
 Plug 'tpope/vim-fugitive'
 Plug 'mhinz/vim-signify'
 Plug 'mbbill/undotree'
+Plug 'benmills/vimux'
+Plug 'benmills/vimux-golang'
 call plug#end()
 
 set termguicolors
@@ -59,6 +61,10 @@ au FileType go nmap gt :GoTest!<cr>
 au FileType go nmap gf :GoTestFunc!<cr>
 au FileType go nmap gc :GoCoverageToggle<cr>
 au FileType go nmap gd <Plug>(go-def)
+
+map <Leader>ra :wa<CR> :GolangTestCurrentPackage<CR>
+map <Leader>rf :wa<CR> :GolangTestFocused<CR>
+map <Leader>rl :wa<CR> :VimuxRunLastCommand<CR>
 
 let g:ctrlp_show_hidden = 1
 
