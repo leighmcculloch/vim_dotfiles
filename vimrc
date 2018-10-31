@@ -7,12 +7,13 @@ Plug 'scrooloose/nerdtree'
 Plug 'maralla/completor.vim'
 Plug 'vim-scripts/vim-auto-save'
 Plug 'terryma/vim-multiple-cursors'
-Plug 'ErichDonGubler/vim-sublime-monokai'
+Plug 'leighmcculloch/vim-sublime-monokai'
 Plug 'tpope/vim-fugitive'
 Plug 'mhinz/vim-signify'
 Plug 'mbbill/undotree'
 Plug 'benmills/vimux'
 Plug 'benmills/vimux-golang'
+Plug 'rhysd/vim-crystal'
 call plug#end()
 
 set termguicolors
@@ -39,9 +40,10 @@ let g:auto_save_no_updatetime = 1
 let g:go_list_type = "quickfix"
 let g:go_highlight_build_constraints = 1
 let g:go_highlight_extra_types = 1
-let g:go_highlight_fields = 1
+let g:go_highlight_fields = 0
 let g:go_highlight_functions = 1
-let g:go_highlight_methods = 1
+let g:go_highlight_function_arguments = 1
+let g:go_highlight_function_calls = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_structs = 1
 let g:go_highlight_types = 1
