@@ -7,19 +7,19 @@ Plug 'scrooloose/nerdtree'
 Plug 'maralla/completor.vim'
 Plug 'vim-scripts/vim-auto-save'
 Plug 'terryma/vim-multiple-cursors'
-Plug 'leighmcculloch/vim-sublime-monokai'
 Plug 'tpope/vim-fugitive'
 Plug 'mhinz/vim-signify'
 Plug 'mbbill/undotree'
 Plug 'benmills/vimux'
 Plug 'benmills/vimux-golang'
 Plug 'rhysd/vim-crystal'
+Plug 'kaicataldo/material.vim'
 call plug#end()
 
 set termguicolors
 
 set background=dark
-silent! colorscheme sublimemonokai
+silent! colorscheme material
 
 set backspace=indent,eol,start
 
