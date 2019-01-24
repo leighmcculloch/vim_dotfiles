@@ -26,7 +26,7 @@ set backspace=indent,eol,start
 nmap cn :cnext<cr>
 nmap cp :cprevious<cr>
 
-setlocal expandtab shiftwidth=2 softtabstop=2 tabstop=2
+au FileType * setlocal expandtab shiftwidth=2 softtabstop=2 tabstop=2
 au FileType go setlocal noexpandtab shiftwidth=4 softtabstop=4 tabstop=4
 
 let g:netrw_banner = 0
