@@ -14,6 +14,7 @@ Plug 'benmills/vimux'
 Plug 'benmills/vimux-golang'
 Plug 'rhysd/vim-crystal'
 Plug 'kaicataldo/material.vim'
+Plug 'junegunn/vim-easy-align'
 call plug#end()
 
 set termguicolors
