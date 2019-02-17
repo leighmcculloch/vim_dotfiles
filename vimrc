@@ -15,6 +15,7 @@ Plug 'benmills/vimux-golang'
 Plug 'rhysd/vim-crystal'
 Plug 'kaicataldo/material.vim'
 Plug 'junegunn/vim-easy-align'
+Plug 'natebosch/vim-lsc'
 call plug#end()
 
 set termguicolors
@@ -83,3 +84,22 @@ noremap <buffer> <silent> $ g$
 " CTRL-H/J/K/L in popups
 inoremap <expr> <c-j> (pumvisible()?"\<C-n>":"\<c-j>")
 inoremap <expr> <c-k> (pumvisible()?"\<C-p>":"\<c-k>")
+
+" Language Server configuration
+let g:lsc_server_commands = {'java': '/home/leighmcculloch/devel/java-language-server/dist/mac/bin/launcher --quiet'}
+let g:lsc_trace_level = 'off'
+let g:lsc_auto_map = {
+    \ 'GoToDefinition': '<C-]>',
+    \ 'GoToDefinitionSplit': ['<C-W>]', '<C-W><C-]>'],
+    \ 'FindReferences': 'gr',
+    \ 'NextReference': '',
+    \ 'PreviousReference': '',
+    \ 'FindImplementations': '',
+    \ 'FindCodeActions': '',
+    \ 'Rename': '',
+    \ 'ShowHover': v:true,
+    \ 'DocumentSymbol': 'go',
+    \ 'WorkspaceSymbol': 'gS',
+    \ 'SignatureHelp': '<C-m>',
+    \ 'Completion': 'completefunc',
+    \}
