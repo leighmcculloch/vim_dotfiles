@@ -15,7 +15,10 @@ Plug 'benmills/vimux-golang'
 Plug 'rhysd/vim-crystal'
 Plug 'kaicataldo/material.vim'
 Plug 'junegunn/vim-easy-align'
-Plug 'natebosch/vim-lsc'
+Plug 'prabirshrestha/async.vim'
+Plug 'prabirshrestha/vim-lsp'
+Plug 'prabirshrestha/asyncomplete.vim'
+Plug 'prabirshrestha/asyncomplete-lsp.vim'
 call plug#end()
 
 set termguicolors
@@ -86,20 +89,16 @@ inoremap <expr> <c-j> (pumvisible()?"\<C-n>":"\<c-j>")
 inoremap <expr> <c-k> (pumvisible()?"\<C-p>":"\<c-k>")
 
 " Language Server configuration
-let g:lsc_server_commands = {'java': '/home/leighmcculloch/devel/java-language-server/dist/mac/bin/launcher --quiet'}
-let g:lsc_trace_level = 'off'
-let g:lsc_auto_map = {
-    \ 'GoToDefinition': '<C-]>',
-    \ 'GoToDefinitionSplit': ['<C-W>]', '<C-W><C-]>'],
-    \ 'FindReferences': 'gr',
-    \ 'NextReference': '',
-    \ 'PreviousReference': '',
-    \ 'FindImplementations': '',
-    \ 'FindCodeActions': '',
-    \ 'Rename': '',
-    \ 'ShowHover': v:true,
-    \ 'DocumentSymbol': 'go',
-    \ 'WorkspaceSymbol': 'gS',
-    \ 'SignatureHelp': '<C-m>',
-    \ 'Completion': 'completefunc',
-    \}
+au User lsp_setup call lsp#register_server({
+  \ 'name': 'java-language-server',
+  \ 'cmd': {server_info->['/home/leighmcculloch/devel/java-language-server/dist/mac/bin/launcher']},
+  \ 'whitelist': ['java'],
+  \ })
+autocmd FileType java nmap <C-e> <plug>(lsp-document-diagnostics)
+autocmd FileType java nmap <C-i> <plug>(lsp-hover)
+autocmd FileType java nmap <C-]> <plug>(lsp-definition)
+autocmd FileType java nmap gr <plug>(lsp-references)
+autocmd FileType java nmap go <plug>(lsp-document-symbol)
+autocmd FileType java nmap gS <plug>(lsp-workspace-symbol)
+"let g:lsp_log_verbose = 1
+"let g:lsp_log_file = expand('~/vim-lsp.log')
