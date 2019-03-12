@@ -38,6 +38,23 @@ autocmd FileType make setlocal noexpandtab shiftwidth=4 softtabstop=4 tabstop=4
 let g:netrw_banner = 0
 let g:netrw_liststyle = 3
 
+" Navigating within wrapped lines
+noremap <buffer> <silent> k gk
+noremap <buffer> <silent> j gj
+noremap <buffer> <silent> 0 g0
+noremap <buffer> <silent> $ g$
+
+" CTRL-H/J/K/L in popups
+inoremap <expr> <c-j> (pumvisible()?"\<C-n>":"\<c-j>")
+inoremap <expr> <c-k> (pumvisible()?"\<C-p>":"\<c-k>")
+
+" CTRL-H/L to iterate through buffers
+noremap <C-H> :bprev<CR>
+noremap <C-L> :bnext<CR>
+
+" CTRL-Q to delete a buffer
+noremap <C-H> :bdelete<CR>
+
 let g:auto_save = 1
 let g:auto_save_in_insert_mode = 0
 let g:auto_save_silent = 1
@@ -77,16 +94,6 @@ map <Leader>rl :wa<CR> :VimuxRunLastCommand<CR>
 let g:ctrlp_show_hidden = 1
 
 nmap <Leader>nt :NERDTreeToggle<cr>
-
-" Navigating within wrapped lines
-noremap <buffer> <silent> k gk
-noremap <buffer> <silent> j gj
-noremap <buffer> <silent> 0 g0
-noremap <buffer> <silent> $ g$
-
-" CTRL-H/J/K/L in popups
-inoremap <expr> <c-j> (pumvisible()?"\<C-n>":"\<c-j>")
-inoremap <expr> <c-k> (pumvisible()?"\<C-p>":"\<c-k>")
 
 " Language Server configuration
 au User lsp_setup call lsp#register_server({
