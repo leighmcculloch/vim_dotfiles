@@ -35,9 +35,6 @@ autocmd FileType * setlocal expandtab shiftwidth=2 softtabstop=2 tabstop=2
 autocmd FileType go setlocal noexpandtab shiftwidth=4 softtabstop=4 tabstop=4
 autocmd FileType make setlocal noexpandtab shiftwidth=4 softtabstop=4 tabstop=4
 
-let g:netrw_banner = 0
-let g:netrw_liststyle = 3
-
 " Navigating within wrapped lines
 noremap <buffer> <silent> k gk
 noremap <buffer> <silent> j gj
