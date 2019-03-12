@@ -36,10 +36,10 @@ autocmd FileType go setlocal noexpandtab shiftwidth=4 softtabstop=4 tabstop=4
 autocmd FileType make setlocal noexpandtab shiftwidth=4 softtabstop=4 tabstop=4
 
 " Navigating within wrapped lines
-noremap <buffer> <silent> k gk
-noremap <buffer> <silent> j gj
-noremap <buffer> <silent> 0 g0
-noremap <buffer> <silent> $ g$
+noremap <silent> k gk
+noremap <silent> j gj
+noremap <silent> 0 g0
+noremap <silent> $ g$
 
 " CTRL-H/J/K/L in popups
 inoremap <expr> <c-j> (pumvisible()?"\<C-n>":"\<c-j>")
