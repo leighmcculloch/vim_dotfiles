@@ -46,11 +46,11 @@ inoremap <expr> <c-j> (pumvisible()?"\<C-n>":"\<c-j>")
 inoremap <expr> <c-k> (pumvisible()?"\<C-p>":"\<c-k>")
 
 " CTRL-H/L to iterate through buffers
-noremap <C-H> :bprev<CR>
-noremap <C-L> :bnext<CR>
+noremap <C-h> :bprev<CR>
+noremap <C-l> :bnext<CR>
 
 " CTRL-Q to delete a buffer
-noremap <C-H> :bdelete<CR>
+noremap <C-q> :bdelete<CR>
 
 let g:auto_save = 1
 let g:auto_save_in_insert_mode = 0
