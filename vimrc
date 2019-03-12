@@ -78,6 +78,8 @@ let g:ale_sign_error = 'x'
 let g:ale_sign_warning = '-'
 
 let g:airline#extensions#ale#enabled = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#formatter = 'unique_tail'
 
 au FileType go nmap <leader>gt :GoDeclsDir<cr>
 au FileType go nmap <leader>gr :GoRun<cr>
