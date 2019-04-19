@@ -85,6 +85,7 @@ au FileType go nmap gt :GoTest!<cr>
 au FileType go nmap gf :GoTestFunc!<cr>
 au FileType go nmap gc :GoCoverageToggle<cr>
 au FileType go nmap gd <Plug>(go-def)
+au FileType go nmap gr <Plug>(go-referrers)
 
 map <Leader>ra :wa<CR> :GolangTestCurrentPackage<CR>
 map <Leader>rf :wa<CR> :GolangTestFocused<CR>
