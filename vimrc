@@ -50,7 +50,7 @@ noremap <c-h> :bprev<CR>
 noremap <c-l> :bnext<CR>
 
 " CTRL-Q to delete a buffer
-noremap <c-w> :bdelete<CR>
+noremap <c-q> :bdelete<CR>
 
 let g:auto_save = 1
 let g:auto_save_in_insert_mode = 0
