@@ -1,5 +1,5 @@
 call plug#begin('~/.vim/plugged')
-Plug 'fatih/vim-go'
+Plug 'fatih/vim-go', { 'tag': 'v1.19' }
 Plug 'w0rp/ale'
 Plug 'vim-airline/vim-airline'
 Plug 'ctrlpvim/ctrlp.vim'
