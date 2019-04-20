@@ -1,5 +1,4 @@
 call plug#begin('~/.vim/plugged')
-Plug 'fatih/vim-go', { 'tag': 'v1.19' }
 Plug 'w0rp/ale'
 Plug 'vim-airline/vim-airline'
 Plug 'ctrlpvim/ctrlp.vim'
@@ -101,11 +100,20 @@ au User lsp_setup call lsp#register_server({
   \ 'cmd': {server_info->['/home/leighmcculloch/devel/java-language-server/dist/mac/bin/launcher']},
   \ 'whitelist': ['java'],
   \ })
-autocmd FileType java nmap <C-e> <plug>(lsp-document-diagnostics)
-autocmd FileType java nmap <C-i> <plug>(lsp-hover)
-autocmd FileType java nmap <C-]> <plug>(lsp-definition)
-autocmd FileType java nmap gr <plug>(lsp-references)
-autocmd FileType java nmap go <plug>(lsp-document-symbol)
-autocmd FileType java nmap gS <plug>(lsp-workspace-symbol)
+au User lsp_setup call lsp#register_server({
+  \ 'name': 'go-lang',
+  \ 'cmd': {server_info->['gopls']},
+  \ 'whitelist': ['go'],
+  \ })
+au FileType java,go nmap <C-e> <plug>(lsp-document-diagnostics)
+au FileType java,go nmap <C-i> <plug>(lsp-hover)
+au FileType java,go nmap <C-]> <plug>(lsp-definition)
+au FileType java nmap gr <plug>(lsp-references)
+au FileType java nmap go <plug>(lsp-document-symbol)
+au FileType java nmap gS <plug>(lsp-workspace-symbol)
+au FileType go nmap <buffer> ,n <plug>(lsp-next-error)
+au FileType go nmap <buffer> ,p <plug>(lsp-previous-error)
+au FileType go setlocal omnifunc=lsp#complete
+
 "let g:lsp_log_verbose = 1
 "let g:lsp_log_file = expand('~/vim-lsp.log')
