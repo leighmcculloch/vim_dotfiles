@@ -1,5 +1,7 @@
-install:
+setup:
 	ln -sf $$PWD $$HOME/.vim
+
+install: setup
 	vim +PlugInstall +qall
 
 update-vim-plug:
