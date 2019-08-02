@@ -11,13 +11,11 @@ Plug 'mhinz/vim-signify'
 Plug 'mbbill/undotree'
 Plug 'benmills/vimux'
 Plug 'benmills/vimux-golang'
-Plug 'rhysd/vim-crystal'
 Plug 'kaicataldo/material.vim'
-Plug 'junegunn/vim-easy-align'
 Plug 'prabirshrestha/async.vim'
 Plug 'prabirshrestha/vim-lsp'
-Plug 'prabirshrestha/asyncomplete.vim'
-Plug 'prabirshrestha/asyncomplete-lsp.vim'
+"Plug 'prabirshrestha/asyncomplete.vim'
+"Plug 'prabirshrestha/asyncomplete-lsp.vim'
 call plug#end()
 
 set termguicolors
