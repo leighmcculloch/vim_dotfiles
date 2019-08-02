@@ -77,14 +77,15 @@ let g:airline#extensions#ale#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 
-au FileType go nmap <leader>gt :GoDeclsDir<cr>
-au FileType go nmap <leader>gr :GoRun<cr>
-au FileType go nmap gi :GoInfo<cr>
-au FileType go nmap gt :GoTest!<cr>
-au FileType go nmap gf :GoTestFunc!<cr>
-au FileType go nmap gc :GoCoverageToggle<cr>
-au FileType go nmap gd <Plug>(go-def)
-au FileType go nmap gr <Plug>(go-referrers)
+" vim-go mappings
+" au FileType go nmap <leader>gt :GoDeclsDir<cr>
+" au FileType go nmap <leader>gr :GoRun<cr>
+" au FileType go nmap gi :GoInfo<cr>
+" au FileType go nmap gt :GoTest!<cr>
+" au FileType go nmap gf :GoTestFunc!<cr>
+" au FileType go nmap gc :GoCoverageToggle<cr>
+" au FileType go nmap gd <Plug>(go-def)
+" au FileType go nmap gr <Plug>(go-referrers)
 
 map <Leader>ra :wa<CR> :GolangTestCurrentPackage<CR>
 map <Leader>rf :wa<CR> :GolangTestFocused<CR>
@@ -109,8 +110,8 @@ au User lsp_setup call lsp#register_server({
 au FileType java,go nmap <C-e> <plug>(lsp-document-diagnostics)
 au FileType java,go nmap <C-i> <plug>(lsp-hover)
 au FileType java,go nmap <C-]> <plug>(lsp-definition)
-au FileType java nmap gr <plug>(lsp-references)
-au FileType java nmap go <plug>(lsp-document-symbol)
+au FileType java,go nmap gr <plug>(lsp-references)
+au FileType java,go nmap go <plug>(lsp-document-symbol)
 au FileType java nmap gS <plug>(lsp-workspace-symbol)
 au FileType go nmap <buffer> ,n <plug>(lsp-next-error)
 au FileType go nmap <buffer> ,p <plug>(lsp-previous-error)
