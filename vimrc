@@ -93,6 +93,7 @@ map <Leader>rl :wa<CR> :VimuxRunLastCommand<CR>
 let g:ctrlp_show_hidden = 1
 
 nmap <Leader>nt :NERDTreeToggle<cr>
+nmap <Leader>nf :NERDTreeFind<cr>
 
 " Language Server configuration
 au User lsp_setup call lsp#register_server({
