@@ -11,6 +11,7 @@ Plug 'mhinz/vim-signify'
 Plug 'mbbill/undotree'
 "Plug 'myitcv/govim'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'sebdah/vim-delve'
 Plug 'benmills/vimux'
 Plug 'benmills/vimux-golang'
 Plug 'kaicataldo/material.vim'
@@ -93,6 +94,8 @@ au FileType go nmap gf :GoTestFunc!<cr>
 au FileType go nmap gd <Plug>(go-def)
 au FileType go nmap gr <Plug>(go-referrers)
 au FileType go nmap ga :GoAlternate<cr>
+au FileType go nmap gv :GoVet<cr>
+au FileType go nmap gc :GoCoverage<cr>
 
 " vim-lsp config
 "au User lsp_setup call lsp#register_server({
