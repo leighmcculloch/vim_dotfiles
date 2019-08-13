@@ -76,26 +76,35 @@ nmap <c-g> :NERDTreeFind<cr>
 
 " vim-go
 let g:go_highlight_build_constraints = 1
+let g:go_highlight_generate_tags = 1
 let g:go_highlight_extra_types = 1
 let g:go_highlight_fields = 0
 let g:go_highlight_functions = 1
-let g:go_highlight_function_arguments = 1
+let g:go_highlight_function_arguments = 0
 let g:go_highlight_function_calls = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_structs = 1
 let g:go_highlight_types = 1
 let g:go_auto_sameids = 1
-let g:go_auto_type_info = 1
+let g:go_auto_type_info = 0
 let g:go_fmt_command = 'goimports'
 au FileType go nmap gs :GoDeclsDir<cr>
-au FileType go nmap gi :GoInfo<cr>
+au FileType go nmap <c-i> :GoInfo<cr>
 au FileType go nmap gt :GoTest!<cr>
 au FileType go nmap gf :GoTestFunc!<cr>
-au FileType go nmap gd <Plug>(go-def)
+au FileType go nmap gi :GoDescribe<cr>
+au FileType go nmap <c-]> <Plug>(go-def)
 au FileType go nmap gr <Plug>(go-referrers)
-au FileType go nmap ga :GoAlternate<cr>
 au FileType go nmap gv :GoVet<cr>
 au FileType go nmap gc :GoCoverage<cr>
+autocmd Filetype go command! -bang A call go#alternate#Switch(<bang>0, 'edit')
+autocmd Filetype go command! -bang AV call go#alternate#Switch(<bang>0, 'vsplit')
+autocmd Filetype go command! -bang AS call go#alternate#Switch(<bang>0, 'split')
+autocmd Filetype go command! -bang AT call go#alternate#Switch(<bang>0, 'tabe')
+
+" govim
+"au FileType go nmap <c-i> :call GOVIMHover()<CR>
+"au FileType go nmap gr :GOVIMReferences<CR>
 
 " vim-lsp config
 "au User lsp_setup call lsp#register_server({
