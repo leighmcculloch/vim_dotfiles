@@ -78,6 +78,9 @@ nmap <Leader>nt :NERDTreeToggle<cr>
 nmap <Leader>nf :NERDTreeFind<cr>
 nmap <c-g> :NERDTreeFind<cr>
 
+" delve
+au FileType go nmap gb :DlvToggleBreakpoint<cr>
+
 " vim-go
 let g:go_highlight_build_constraints = 1
 let g:go_highlight_generate_tags = 1
