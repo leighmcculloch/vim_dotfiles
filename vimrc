@@ -52,6 +52,10 @@ noremap <c-l> :bnext<CR>
 " CTRL-Q to delete a buffer
 noremap <c-q> :bdelete<CR>
 
+set undodir=~/.vim/undodir
+set undofile
+nmap <Leader>nu :UndotreeToggle<cr>
+
 let g:auto_save = 1
 let g:auto_save_in_insert_mode = 0
 let g:auto_save_silent = 1
