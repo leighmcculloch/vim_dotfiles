@@ -13,7 +13,7 @@ Plug 'mbbill/undotree'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'sebdah/vim-delve'
 Plug 'benmills/vimux'
-Plug 'benmills/vimux-golang'
+Plug 'janko/vim-test'
 Plug 'kaicataldo/material.vim'
 "Plug 'prabirshrestha/async.vim'
 "Plug 'prabirshrestha/vim-lsp'
@@ -68,15 +68,27 @@ let g:airline#extensions#ale#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 
-map <Leader>ra :wa<CR> :GolangTestCurrentPackage<CR>
-map <Leader>rf :wa<CR> :GolangTestFocused<CR>
-map <Leader>rl :wa<CR> :VimuxRunLastCommand<CR>
-
 let g:ctrlp_show_hidden = 1
+
+let g:test#preserve_screen = 0
+let test#strategy = 'vimux'
+let test#go#gotest#options = {
+  \ 'nearest': '-v',
+\}
+let test#ruby#rspec#options = {
+  \ 'nearest': '--backtrace',
+  \ 'file':    '--format documentation',
+  \ 'suite':   '--tag ~slow',
+\}
 
 nmap <Leader>nt :NERDTreeToggle<cr>
 nmap <Leader>nf :NERDTreeFind<cr>
 nmap <c-g> :NERDTreeFind<cr>
+
+nmap <Leader>rf :wa<cr> :TestNearest<cr>
+nmap <Leader>rb :wa<cr> :TestFile<cr>
+nmap <Leader>ra :wa<cr> :TestSuite<cr>
+nmap <Leader>rl :wa<CR> :VimuxRunLastCommand<cr>
 
 " delve
 au FileType go nmap gb :DlvToggleBreakpoint<cr>
