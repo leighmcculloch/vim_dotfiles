@@ -11,8 +11,9 @@ Plug 'mhinz/vim-signify'
 Plug 'mbbill/undotree'
 "Plug 'myitcv/govim'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-Plug 'sebdah/vim-delve'
 Plug 'benmills/vimux'
+"Plug 'sebdah/vim-delve'
+Plug 'leighmcculloch/fork-vim-delve', { 'branch': 'add_vimux' }
 Plug 'janko/vim-test'
 Plug 'kaicataldo/material.vim'
 "Plug 'prabirshrestha/async.vim'
@@ -92,7 +93,9 @@ nmap <Leader>ra :wa<cr> :TestSuite<cr>
 nmap <Leader>rl :wa<CR> :VimuxRunLastCommand<cr>
 
 " delve
+let g:delve_use_vimux = 1
 au FileType go nmap gb :DlvToggleBreakpoint<cr>
+au FileType go nmap gp :DlvToggleTracepoint<cr>
 
 " vim-go
 let g:go_highlight_build_constraints = 1
