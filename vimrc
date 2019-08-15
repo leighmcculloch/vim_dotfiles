@@ -84,6 +84,7 @@ let test#ruby#rspec#options = {
 nmap <Leader>nt :NERDTreeToggle<cr>
 nmap <Leader>nf :NERDTreeFind<cr>
 nmap <c-g> :NERDTreeFind<cr>
+au FileType nerdtree nmap <buffer> <c-g> :NERDTreeClose<cr>
 
 nmap <Leader>rf :wa<cr> :TestNearest<cr>
 nmap <Leader>rb :wa<cr> :TestFile<cr>
