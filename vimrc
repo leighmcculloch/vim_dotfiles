@@ -13,8 +13,8 @@ Plug 'mbbill/undotree'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'benmills/vimux'
 "Plug 'sebdah/vim-delve'
-Plug 'leighmcculloch/fork-vim-delve', { 'branch': 'add_vimux' }
-Plug 'janko/vim-test'
+Plug 'leighmcculloch/fork-vim-delve'
+Plug 'leighmcculloch/fork-vim-test'
 Plug 'kaicataldo/material.vim'
 "Plug 'prabirshrestha/async.vim'
 "Plug 'prabirshrestha/vim-lsp'
@@ -72,11 +72,14 @@ let g:airline#extensions#tabline#formatter = 'unique_tail'
 let g:ctrlp_show_hidden = 1
 
 let g:test#preserve_screen = 0
-let test#strategy = 'vimux'
-let test#go#gotest#options = {
+let g:test#strategy = 'vimux'
+let g:test#go#gotest#options = {
   \ 'nearest': '-v',
 \}
-let test#ruby#rspec#options = {
+let g:test#go#delve#options = {
+  \ 'nearest': '-test.v',
+\}
+let g:test#ruby#rspec#options = {
   \ 'nearest': '--backtrace',
   \ 'file':    '--format documentation',
   \ 'suite':   '--tag ~slow',
@@ -91,6 +94,13 @@ nmap <Leader>rf :wa<cr> :TestNearest<cr>
 nmap <Leader>rb :wa<cr> :TestFile<cr>
 nmap <Leader>ra :wa<cr> :TestSuite<cr>
 nmap <Leader>rl :wa<CR> :VimuxRunLastCommand<cr>
+
+function! DebugNearest()
+  let g:test#go#runner = 'delve'
+  TestNearest
+  unlet g:test#go#runner
+endfunction
+nmap <Leader>rd :wa<cr> :call DebugNearest()<cr>
 
 " delve
 let g:delve_use_vimux = 1
