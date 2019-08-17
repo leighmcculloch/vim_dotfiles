@@ -14,7 +14,7 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'benmills/vimux'
 "Plug 'sebdah/vim-delve'
 Plug 'leighmcculloch/fork-vim-delve'
-Plug 'leighmcculloch/vim-test'
+Plug 'janko/vim-test'
 Plug 'kaicataldo/material.vim'
 "Plug 'prabirshrestha/async.vim'
 "Plug 'prabirshrestha/vim-lsp'
