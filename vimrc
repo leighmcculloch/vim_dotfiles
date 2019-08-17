@@ -20,6 +20,7 @@ Plug 'kaicataldo/material.vim'
 "Plug 'prabirshrestha/vim-lsp'
 "Plug 'prabirshrestha/asyncomplete.vim'
 "Plug 'prabirshrestha/asyncomplete-lsp.vim'
+Plug 'justinmk/vim-sneak'
 call plug#end()
 
 set termguicolors
