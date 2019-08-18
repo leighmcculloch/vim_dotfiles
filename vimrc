@@ -23,6 +23,8 @@ Plug 'kaicataldo/material.vim'
 Plug 'justinmk/vim-sneak'
 call plug#end()
 
+runtime vimrc.lock
+
 set termguicolors
 
 set background=dark
