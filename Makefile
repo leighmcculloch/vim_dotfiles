@@ -2,7 +2,7 @@ setup:
 	ln -sf $$PWD $$HOME/.vim
 
 install: setup
-	vim +PlugInstall +qall
+	vim +PlugInstall +GoUpdateBinaries +qall
 
 update-vim-plug:
 	curl -fLo autoload/plug.vim --create-dirs \

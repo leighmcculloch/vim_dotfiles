@@ -10,7 +10,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'mhinz/vim-signify'
 Plug 'mbbill/undotree'
 "Plug 'myitcv/govim'
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'fatih/vim-go'
 Plug 'benmills/vimux'
 "Plug 'sebdah/vim-delve'
 Plug 'leighmcculloch/fork-vim-delve'
