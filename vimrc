@@ -34,8 +34,8 @@ silent! colorscheme material
 
 set backspace=indent,eol,start
 
-nmap cn :cnext<cr>
-nmap cp :cprevious<cr>
+nmap cn :lnext<cr>
+nmap cp :lprevious<cr>
 
 autocmd FileType * setlocal expandtab shiftwidth=2 softtabstop=2 tabstop=2
 autocmd FileType go setlocal noexpandtab shiftwidth=4 softtabstop=4 tabstop=4
