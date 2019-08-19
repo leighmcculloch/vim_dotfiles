@@ -25,6 +25,8 @@ call plug#end()
 
 runtime vimrc.lock
 
+set nomore
+
 set termguicolors
 
 set background=dark
