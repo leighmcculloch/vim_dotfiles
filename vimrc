@@ -57,6 +57,9 @@ noremap <c-l> :bnext<CR>
 " CTRL-Q to delete a buffer
 noremap <c-q> :bdelete<CR>
 
+" Search word under cursor
+nnoremap <leader>gw :Ggrep! "\b<C-R><C-W>\b"<CR>:cw<CR>
+
 set undodir=~/.vim/undodir
 set undofile
 nmap <Leader>nu :UndotreeToggle<cr>
