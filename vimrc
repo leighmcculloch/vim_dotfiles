@@ -20,6 +20,7 @@ Plug 'kaicataldo/material.vim'
 "Plug 'prabirshrestha/asyncomplete.vim'
 "Plug 'prabirshrestha/asyncomplete-lsp.vim'
 Plug 'justinmk/vim-sneak'
+Plug 'leighmcculloch/vim-github-url'
 call plug#end()
 
 runtime vimrc.lock
@@ -103,6 +104,10 @@ function! NERDTreeFindOrToggle()
 endfun
 nmap <c-e> :call NERDTreeFindOrToggle()<cr>
 au FileType nerdtree nmap <buffer> <c-e> :NERDTreeClose<cr>
+
+noremap <Leader>gh :GitHubURLRepo<cr>
+noremap <Leader>gf :GitHubURLBlob<cr>
+noremap <Leader>gb :GitHubURLBlame<cr>
 
 nmap <Leader>rf :wa<cr> :TestNearest<cr>
 nmap <Leader>rb :wa<cr> :TestFile<cr>
