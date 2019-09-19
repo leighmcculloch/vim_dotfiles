@@ -20,7 +20,7 @@ Plug 'kaicataldo/material.vim'
 "Plug 'prabirshrestha/asyncomplete.vim'
 "Plug 'prabirshrestha/asyncomplete-lsp.vim'
 Plug 'justinmk/vim-sneak'
-Plug 'leighmcculloch/vim-github-url'
+Plug 'pgr0ss/vim-github-url'
 call plug#end()
 
 runtime vimrc.lock
