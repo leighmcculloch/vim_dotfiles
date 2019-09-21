@@ -21,6 +21,7 @@ Plug 'kaicataldo/material.vim'
 "Plug 'prabirshrestha/asyncomplete-lsp.vim'
 Plug 'justinmk/vim-sneak'
 Plug 'pgr0ss/vim-github-url'
+Plug 'scrooloose/nerdcommenter'
 call plug#end()
 
 runtime vimrc.lock
