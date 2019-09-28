@@ -69,7 +69,7 @@ nmap <Leader>nu :UndotreeToggle<cr>
 let g:auto_save = 1
 let g:auto_save_in_insert_mode = 0
 let g:auto_save_silent = 1
-let g:auto_save_no_updatetime = 1
+let g:auto_save_no_updatetime = 0
 
 let g:ale_sign_error = 'x'
 let g:ale_sign_warning = '-'
