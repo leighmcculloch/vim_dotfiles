@@ -82,8 +82,9 @@ let g:ctrlp_show_hidden = 1
 
 let g:test#preserve_screen = 0
 let g:test#strategy = 'vimux'
+let test#go#gotest#executable = 'gotestsum'
 let g:test#go#gotest#options = {
-  \ 'nearest': '-v',
+  \ 'nearest': '-f standard-verbose --',
 \}
 let g:test#go#delve#options = {
   \ 'nearest': '-test.v',
