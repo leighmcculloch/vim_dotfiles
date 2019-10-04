@@ -22,6 +22,7 @@ Plug 'kaicataldo/material.vim'
 Plug 'justinmk/vim-sneak'
 Plug 'pgr0ss/vim-github-url'
 Plug 'scrooloose/nerdcommenter'
+Plug 'haya14busa/incsearch.vim'
 call plug#end()
 
 runtime vimrc.lock
@@ -61,6 +62,18 @@ noremap <c-q> :bdelete<CR>
 
 " Search word under cursor
 nnoremap <leader>gw :Ggrep! "\b<C-R><C-W>\b"<CR>:cw<CR>
+
+" Incremental search
+map / <Plug>(incsearch-forward)
+map ? <Plug>(incsearch-backward)
+set hlsearch
+let g:incsearch#auto_nohlsearch = 1
+map n  <Plug>(incsearch-nohl-n)
+map N  <Plug>(incsearch-nohl-N)
+map *  <Plug>(incsearch-nohl-*)
+map #  <Plug>(incsearch-nohl-#)
+map g* <Plug>(incsearch-nohl-g*)
+map g# <Plug>(incsearch-nohl-g#)
 
 set undodir=~/.vim/undodir
 set undofile
