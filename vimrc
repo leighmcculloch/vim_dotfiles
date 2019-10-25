@@ -108,6 +108,9 @@ let g:test#ruby#rspec#options = {
   \ 'suite':   '--tag ~slow',
 \}
 
+let g:VimuxOrientation = 'h'
+let g:VimuxHeight = '35'
+
 nmap <Leader>nt :NERDTreeToggle<cr>
 nmap <Leader>nf :NERDTreeFind<cr>
 function! NERDTreeFindOrToggle()
@@ -128,6 +131,9 @@ nmap <Leader>rf :wa<cr> :TestNearest<cr>
 nmap <Leader>rb :wa<cr> :TestFile<cr>
 nmap <Leader>ra :wa<cr> :TestSuite<cr>
 nmap <Leader>rl :wa<CR> :VimuxRunLastCommand<cr>
+nmap <Leader>vl :wa<CR> :VimuxRunLastCommand<cr>
+nmap <Leader>vx :VimuxInterruptRunner<cr>
+nmap <Leader>vz :call VimuxZoomRunner()<cr>
 
 function! DebugNearest()
   let g:test#go#runner = 'delve'
