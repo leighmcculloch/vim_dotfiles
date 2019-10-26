@@ -161,6 +161,7 @@ let g:go_highlight_types = 1
 let g:go_auto_sameids = 1
 let g:go_auto_type_info = 0
 let g:go_fmt_command = 'goimports'
+let g:go_fmt_fail_silently = 1
 au FileType go nmap gs :GoDeclsDir<cr>
 au FileType go nmap <c-i> :GoInfo<cr>
 au FileType go nmap gt :GoTest!<cr>
