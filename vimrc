@@ -23,6 +23,7 @@ Plug 'justinmk/vim-sneak'
 Plug 'pgr0ss/vim-github-url'
 Plug 'scrooloose/nerdcommenter'
 Plug 'haya14busa/incsearch.vim'
+Plug 'ziglang/zig.vim', { 'for': 'zig' }
 call plug#end()
 
 runtime vimrc.lock
