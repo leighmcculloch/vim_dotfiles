@@ -3,7 +3,7 @@ setup:
 
 install: setup
 	vim +PlugInstall +qall
-	vim +GoUpdateBinaries +qall
+	vim +GoInstallBinaries +qall
 
 update-vim-plug:
 	curl -fLo autoload/plug.vim --create-dirs \
