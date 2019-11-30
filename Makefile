@@ -2,7 +2,7 @@ setup:
 	ln -sf $$PWD $$HOME/.vim
 
 install: setup
-	vim '+PlugInstall 1' +qall
+	vim +PlugInstall +qall
 	vim +GoInstallBinaries +qall
 
 update-vim-plug:
