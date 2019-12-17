@@ -1,5 +1,4 @@
 call plug#begin('~/.vim/plugged')
-Plug 'w0rp/ale'
 Plug 'vim-airline/vim-airline'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'scrooloose/nerdtree'
@@ -86,12 +85,9 @@ let g:auto_save_in_insert_mode = 0
 let g:auto_save_silent = 1
 let g:auto_save_no_updatetime = 0
 
-let g:ale_sign_error = 'x'
-let g:ale_sign_warning = '-'
-
-let g:airline#extensions#ale#enabled = 1
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#formatter = 'unique_tail'
+let g:airline_highlighting_cache = 1
+let g:airline_extensions = ['tabline']
+let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
 
 let g:ctrlp_show_hidden = 1
 
