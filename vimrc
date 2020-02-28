@@ -21,7 +21,6 @@ Plug 'justinmk/vim-sneak'
 Plug 'pgr0ss/vim-github-url'
 Plug 'scrooloose/nerdcommenter'
 Plug 'haya14busa/incsearch.vim'
-Plug 'osyo-manga/vim-over'
 "Plug 'ziglang/zig.vim', { 'for': 'zig' }
 "Plug 'rhysd/vim-crystal', { 'fot': 'crystal' }
 call plug#end()
