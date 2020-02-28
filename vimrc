@@ -4,7 +4,6 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'maralla/completor.vim'
 Plug 'vim-scripts/vim-auto-save'
-Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-fugitive'
 Plug 'mhinz/vim-signify'
 Plug 'mbbill/undotree'
@@ -22,8 +21,9 @@ Plug 'justinmk/vim-sneak'
 Plug 'pgr0ss/vim-github-url'
 Plug 'scrooloose/nerdcommenter'
 Plug 'haya14busa/incsearch.vim'
-Plug 'ziglang/zig.vim', { 'for': 'zig' }
-Plug 'rhysd/vim-crystal', { 'fot': 'crystal' }
+Plug 'osyo-manga/vim-over'
+"Plug 'ziglang/zig.vim', { 'for': 'zig' }
+"Plug 'rhysd/vim-crystal', { 'fot': 'crystal' }
 call plug#end()
 
 runtime vimrc.lock
