@@ -24,6 +24,7 @@ Plug 'haya14busa/incsearch.vim'
 "Plug 'ziglang/zig.vim', { 'for': 'zig' }
 "Plug 'rhysd/vim-crystal', { 'fot': 'crystal' }
 Plug 'martinda/Jenkinsfile-vim-syntax'
+Plug 'mattn/emmet-vim'
 call plug#end()
 
 runtime vimrc.lock
