@@ -13,18 +13,22 @@ Plug 'benmills/vimux'
 Plug 'sebdah/vim-delve'
 Plug 'janko/vim-test'
 Plug 'kaicataldo/material.vim'
-"Plug 'prabirshrestha/async.vim'
-"Plug 'prabirshrestha/vim-lsp'
-"Plug 'prabirshrestha/asyncomplete.vim'
-"Plug 'prabirshrestha/asyncomplete-lsp.vim'
 Plug 'justinmk/vim-sneak'
 Plug 'pgr0ss/vim-github-url'
 Plug 'scrooloose/nerdcommenter'
 Plug 'haya14busa/incsearch.vim'
-"Plug 'ziglang/zig.vim', { 'for': 'zig' }
-"Plug 'rhysd/vim-crystal', { 'fot': 'crystal' }
 Plug 'martinda/Jenkinsfile-vim-syntax'
-Plug 'mattn/emmet-vim'
+Plug 'tpope/vim-eunuch'
+
+" Plugins for use sometimes
+Plug 'ziglang/zig.vim', { 'for': 'zig' }
+Plug 'rhysd/vim-crystal', { 'fot': 'crystal' }
+
+" Plugins for use with a Java LSP
+"Plug 'prabirshrestha/async.vim'
+"Plug 'prabirshrestha/vim-lsp'
+"Plug 'prabirshrestha/asyncomplete.vim'
+"Plug 'prabirshrestha/asyncomplete-lsp.vim'
 call plug#end()
 
 runtime vimrc.lock
