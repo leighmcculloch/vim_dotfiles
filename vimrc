@@ -2,6 +2,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'vim-airline/vim-airline'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'scrooloose/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'maralla/completor.vim'
 Plug 'vim-scripts/vim-auto-save'
 Plug 'tpope/vim-fugitive'
