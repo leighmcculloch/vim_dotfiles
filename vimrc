@@ -34,6 +34,8 @@ call plug#end()
 
 runtime vimrc.lock
 
+filetype plugin on
+
 set nomore
 
 set termguicolors
