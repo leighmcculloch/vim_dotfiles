@@ -66,6 +66,10 @@ inoremap <expr> <c-k> (pumvisible()?"\<C-p>":"\<c-k>")
 noremap <c-h> :bprev<CR>
 noremap <c-l> :bnext<CR>
 
+" CTRL-J/K to iterate through quickfix list errors
+noremap <c-k> :cprev<CR>
+noremap <c-j> :cnext<CR>
+
 " CTRL-Q to delete a buffer
 noremap <c-q> :bdelete<CR>
 
