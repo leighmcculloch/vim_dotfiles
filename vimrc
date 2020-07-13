@@ -121,6 +121,7 @@ let g:test#ruby#rspec#options = {
 let g:VimuxOrientation = 'h'
 let g:VimuxHeight = '35'
 
+let g:NERDTreeWinSize = 31
 nmap <Leader>nt :NERDTreeToggle<cr>
 nmap <Leader>nf :NERDTreeFind<cr>
 function! NERDTreeFindOrToggle()
@@ -128,6 +129,10 @@ function! NERDTreeFindOrToggle()
     NERDTreeToggle
   else
     NERDTreeFind
+    " Work around bug where buffer has full screen size after it has had its
+    " size changed when the buffer next to it has closed. This keeps the tree
+    " fixed to the same size each time it is opened.
+    vertical resize 31
   endif
 endfun
 nmap <c-e> :call NERDTreeFindOrToggle()<cr>
