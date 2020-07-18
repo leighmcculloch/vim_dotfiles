@@ -23,7 +23,8 @@ Plug 'tpope/vim-eunuch'
 
 " Plugins for use sometimes
 Plug 'ziglang/zig.vim', { 'for': 'zig' }
-Plug 'rhysd/vim-crystal', { 'fot': 'crystal' }
+Plug 'rhysd/vim-crystal', { 'for': 'crystal' }
+Plug 'rust-lang/rust.vim', { 'for': 'rust' }
 
 " Plugins for use with a Java LSP
 "Plug 'prabirshrestha/async.vim'
