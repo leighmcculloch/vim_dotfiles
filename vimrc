@@ -74,6 +74,9 @@ noremap <c-j> :cnext<CR>
 " CTRL-Q to delete a buffer
 noremap <c-q> :bdelete<CR>
 
+" Pasting retaining register
+xnoremap <expr> p 'pgv"'.v:register.'y'
+
 " Search word under cursor
 nnoremap <leader>gw :Ggrep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 
