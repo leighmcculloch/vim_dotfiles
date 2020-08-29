@@ -25,6 +25,7 @@ Plug 'tpope/vim-eunuch'
 Plug 'ziglang/zig.vim', { 'for': 'zig' }
 Plug 'rhysd/vim-crystal', { 'for': 'crystal' }
 Plug 'rust-lang/rust.vim', { 'for': 'rust' }
+Plug 'ollykel/v-vim', { 'for': 'v' }
 
 " Plugins for use with a Java LSP
 "Plug 'prabirshrestha/async.vim'
